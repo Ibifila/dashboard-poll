@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.dashboard-headers h5{
+    color:#1E79A1;
+}
+
+.dashboard-borders{
+    border: solid thin black;
+    border-radius: 12px;
+}
+
+.user-info p{
+    font-family: 'Roboto', sans-serif;
+}
+
+.user-info h6{
+    color:#1E79A1;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* .polls-table td, th{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tfoot{
+    border: 0;
+} */
+
+/* .polls-table td{
+    border: 1px solid black;
+    border-collapse: collapse;
+} */
+
+table { 
+    border: 1px solid rgb(0, 0, 0) !important;
+    border-collapse: separate !important;
+    border-left: 0 !important;
+    border-radius: 12px !important;
+    border-spacing: 0px !important;
+}
+thead {
+    display: table-header-group !important;
+    vertical-align: middle !important;
+    border-color:black !important;
+    border-collapse: separate !important;
+}
+tr {
+    display: table-row !important;
+    vertical-align: inherit !important;
+    border-color: black !important;
+}
+th, td {
+    padding: 5px 4px 6px 4px !important; 
+    text-align: center;
+    vertical-align: top !important;
+    border-left: 1px solid rgb(0, 0, 0) !important;    
+}
+td {
+    border-top: 1px solid rgb(0, 0, 0) !important;    
+}
+thead:first-child tr:first-child th:first-child, tbody:first-child tr:first-child td:first-child {
+    border-radius: 12px 0 0 0 !important;
+}
+thead:last-child tr:last-child th:first-child, tbody:last-child tr:last-child td:first-child {
+    border-radius: 0 0 0 12px !important;
+}
+
+.pagenum{
+    background: #09174B;
+    ;
+}
