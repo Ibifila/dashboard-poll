@@ -9,7 +9,7 @@ body{
 }
 
 .side-br{
-    background-color: #09174b;
+    background-color: #09174b !important;
     height: auto;
 }
 .side-br-logo{
@@ -23,7 +23,7 @@ body{
     width: 80%;
 }
 .bg-chartpool{
-    background-color: #2a5297;
+    background-color: #2a5297 !important;
 }
 .side-br{
     font-family:'Baloo Bhai 2', cursive; 
