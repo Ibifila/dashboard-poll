@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/admin_nav_side_bar.css">
+    <link rel="stylesheet" href="css/catmssg-poll.css">
+    <!-- <link rel="stylesheet" href="./css/admin-user.css"> -->
+</head>
+
+<body>
+    <!-- SIDEBAR MOBILE -->
+    <nav class="navbar navbar-dark d-lg-none feeds-btn-bg border-bottom">
+        <div class="container-fluid">
+            <a href="./index.html"
+                class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-dark text-decoration-none">
+                <img src="./images/Logo_white.svg" width="150px" alt="Logo" class="">
+            </a>
+            <!-- toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- nav links -->
+            <div class="collapse navbar-collapse justify-content-end align-center" id="navbarNav">
+                <ul class="navbar-nav text-white ms-2">
+                    <li class="nav-item mb-2">
+                        <a href="./dashboard.html" class="nav-link active text-white " aria-current="page"> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="./polls.html" class="nav-link text-white">
+                            Polls
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="./admin-user.html" class="nav-link text-white">
+                            Users
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="./categories-admin.html" class="nav-link text-white bg-secondary rounded">
+                            Categories
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="./message-admin.html" class="nav-link text-white">
+                            Messages
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="./admin.html" class="nav-link text-white">
+                            Log out
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR DESKTOP -->
+    <nav class="d-none d-lg-block feeds-btn-bg fixed-top h-100 border-end" style="width: 230px;">
+        <div class="d-flex flex-column flex-shrink-0 p-3 pt-4">
+            <a href="./index.html" class="d-flex align-items-center ps-3 me-lg-auto link-dark text-decoration-none">
+                <img src="./images/Logo_white.svg" width="150px" alt="Logo" class="">
+            </a>
+            <ul class="nav  flex-column mb-auto ps-3 pt-5 mt-3 fw-bold">
+                <li class="nav-item mb-4">
+                    <a href="./dashboard.html" class="nav-link active text-white " aria-current="page">
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item mb-4">
+                    <a href="./polls.html" class="nav-link text-white" aria-current="page">
+                        Polls
+                    </a>
+                </li>
+                <li class="nav-item mb-4">
+                    <a href="./admin-user.html" class="nav-link text-white" aria-current="page">
+                        Users
+                    </a>
+                </li>
+                <li class="nav-item mb-4">
+                    <a href="./categories-admin.html" class="nav-link text-white bg-secondary rounded">
+                        Categories
+                    </a>
+                </li>
+                <li class="nav-item mb-4">
+                    <a href="./message-admin.html" class="nav-link text-white">
+                        Messages
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="./admin.html" class="nav-link text-white">
+                        Log out
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sidebar End     -->
+    <!-- beginning of nav  -->
+    <main class="feeds-wrapper">
+        <nav class="navbar navbar-expand navbar-dark bg-chartpool col-12" aria-label="Fourth navbar example">
+            <div class="container">
+                <div class="collapse navbar-collapse" id="navbarsExample04">
+                    <ul class="navbar-nav ms-auto mb-md-0 d-flex align-items-center ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="./images/notification _bell.png" class="rounded"
+                                    width="25px" height="25px" alt="notification icon"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="./images/Mask Group (1).png" class="rounded"
+                                    width="50px" height="50px" alt="admin-icon"></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-bold active" href="#" id="dropdown04"
+                                aria-expanded="false">Admin</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown04">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                                <li><a class="dropdown-item" href="#">Polls</a></li>
+                                <li><a class="dropdown-item active" href="#">Users</a></li>
+                                <li><a class="dropdown-item" href="#">Categories</a></li>
+                                <li><a class="dropdown-item" href="#">Messages</a></li>
+                                <li><a class="dropdown-item " href="./admin.html">Log out</a></li>
+                            </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- categories table -->
+        <div class="col-12 h-auto">
+            <div class="container">
+                <div class="row text">
+                    <div class="search d-flex justify-content-between">
+                        <div class=""> <button class="btn btn-polls mt-2 p-2 mssgbtn  "><a href="#new-category" class=" text-decoration-none text-white"data-bs-toggle="modal" data-bs-target="#new-category">Add a Category</a></button></div>
+                        
+                        <div class="ask"><input type="search" name="search" class=" mt-2 p-2" id="search"
+                                placeholder="search"></div>
+                    </div>
+
+                    <div class="col-12 col-sm-10 col-md-10 col-lg-7 m-1 mb-4  align-center">
+
+                        <div class="table-responsive table-responsive-sm table-responsive-md table-responsive-lg ">
+                            <table id="tab" class="table table-bordered">
+
+                                <thead>
+                                    <tr class="text-center">
+                                        <th scope="col">S/N</th>
+                                        <th scope="col">Category Name</th>
+                                        <th scope="col">Number of Polls</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cat" class="text-center">
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Category Name</td>
+                                        <td>684</td>
+                                        <td><span><a href="#edit-category" class=" text-decoration-none" data-bs-toggle="modal" data-bs-target=".edit-category"><img src="./images/border_color_24px_outlined.svg"
+                                                        alt=""></a></span>
+                                            <span><a href="#"><img src="./images/visibility_24px.png" alt=""></a></span>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            </table>
+                        </div>
+
+                    </div>
+                    <!-- progress bar -->
+                    <div class=" col-12 col-md-8 col-sm-8 col-lg-4 border bar align-center  ">
+                        <div class="row">
+                            <p class="h5 mb-5 mt-2">Category Name</p>
+
+                            <div class="progress mx-auto mt-3" data-value='12.5'>
+                                <span class="progress-left">
+                                    <span class="progress-bar border-warning"></span>
+                                </span>
+                                <span class="progress-right">
+                                    <span class="progress-bar border-warning"></span>
+                                </span>
+                                <div
+                                    class="progress-value w-100 h-100 rounded-circle d-flex flex-column align-items-center justify-content-center">
+                                    <div class="h2 font-weight-bold"> 12.5% </div>
+                                    <div class=" font-weight-light text-muted">OCCUPIES</div>
+                                </div>
+
+                            </div>
+
+                            <div class="h5 text-center mt-4">
+                                <p>Number of Polls : 678 </p>
+                                <p>Number of votes : 678</p>
+                                <div class="mx-auto mt-3">
+                                    <button type="button" class=" col btn btn-polls btn-lg ">view polls</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    </div>
+
+    </section>
+    <div class="modal fade" id="new-category" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="newCategoryLabel" aria-hidden="true">
+        <div class="modal-dialog user-mod">
+        <div class="modal-content modal-cnt">
+            <div class="modal-body text-center">
+                <h4 class="fw-bold mb-5">Enter a new Category</h4>
+                <input class="rounded px-4 border-1 py-2" type="text" placeholder="Enter Category Name">
+            </div>
+            <div class="modal-footer border-0 d-flex justify-content-evenly w-100">
+                <button type="submit" class="btn next-link border-primary mod-btn1 btn-lg text-white" data-bs-dismiss="modal">Add</button>
+                <button type="button" class="btn  btn-lg text-dark border-primary  btn-c2" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+        </div>
+        </div>
+    </div>
+<!-- modal body -->
+    <div class="modal fade edit-category" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editCategoryLabel" aria-hidden="true">
+        <div class="modal-dialog user-mod">
+        <div class="modal-content modal-cnt">
+            <div class="modal-body text-center">
+                <h4 class="fw-bold mb-5">Edit Category</h4>
+                <input class="rounded px-4 border-1 py-2" type="text" placeholder="Enter Category Name">
+            </div>
+            <div class="modal-footer border-0 d-flex justify-content-evenly w-100">
+                <button type="submit" class="btn next-link border-primary mod-btn1 btn-lg text-white" data-bs-dismiss="modal">Add</button>
+                <button type="button" class="btn  btn-lg text-dark border-primary  btn-c2" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="script/catmssg-admin.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+</body>
+
+</html>

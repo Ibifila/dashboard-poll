@@ -2,4 +2,165 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+  }
+  .feeds-bg {
+    background: rgba(238, 238, 238, 0.5);
+  }
+  .notify-num {
+    position: relative;
+    right: 10px;
+    top: 8px;
+  }
+  .latest-menu {
+    outline-color: #ccc9c9;
+    outline-style: double;
+  }
+  .feeds-wrapper {
+    overflow: hidden;
+  }
+  .sidebar-hidden {
+    display: none;
+  }
+  .sidebar-show {
+    display: inline;
+  }
+  #sidebar-button1:hover,
+  #sidebar-button2:hover {
+    cursor: pointer;
+  }
+  .reduce-width,
+  .feeds-wrapper,
+  #sidebar-button1,
+  #sidebar-button2,
+  .sidebar-text {
+    transition: all 0.3s ease-out;
+  }
+  .active-bar:hover {
+    border-right: 3px solid #09174b;
+    border-radius: 2px;
+  }
+  .feeds-btn-bg {
+    background: #09174b;
+  }
+  .feeds-text {
+    color: #09174b !important;
+  }
+  .shape-radius {
+    border-radius: 15px;
+  }
+  
+  .ubuntu-feeds-font {
+    font-family: "Ubuntu", sans-serif;
+    color: #464646;
+  }
+  .change-border {
+    border: 1px solid #09174b;
+  }
+  
+  @media screen and (max-width: 991px) {
+    .feeds-wrapper {
+      width: 100% !important;
+      margin-left: 0 !important;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .feeds-wrapper {
+      width: calc(100% - 130px);
+      margin-left: 130px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .admin-width {
+      width: 75% !important;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .admin-width {
+      width: 100% !important;
+    }
+  }
+
+  /* STYLES FOR FEEDS PAGES ENDS HERE */
+  #landing-page-font {
+    font-family: "Ubuntu", sans-serif;
+  }
+  
+  .button-bg-blue {
+    background: linear-gradient(180deg, #010f43 0%, #09174b 124.76%);
+  }
+  .nav-txt-color {
+    color: rgb(4, 4, 70) !important;
+  }
+  
+  .bg-ash {
+    background-color: #eeeeee;
+  }
+  
+  .satelite-blue {
+    background: linear-gradient(180deg, #010f43 0%, #09174b 124.76%);
+  }
+  
+  .get-answers-sec {
+    background: url(../image/hands-on.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100%;
+  }
+  
+  .get-ans-sm {
+    background: linear-gradient(270.32deg, #09174b 3.36%, #a702c2 95.34%);
+  }
+  
+  .satelite-bg-img {
+    background-image: url(../image/telescopes.png);
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: none;
+  }
+  .square-satellite {
+    position: relative;
+    left: -1rem;
+    top: 10rem;
+    background: #9d37a6;
+    height: 123px;
+    width: 123px;
+    mix-blend-mode: color-dodge;
+  }
+  .circle-satellite {
+    position: relative;
+    left: -3rem;
+    top: 13rem;
+    z-index: 1;
+    height: 249px;
+    width: 249px;
+    background: #031145;
+    mix-blend-mode: screen;
+    border-radius: 50%;
+  }
+  
+  
+  /* This is signup style */
+  .btn-dark-category{
+    color: #fff;
+    background-color: #1E79A1;
+    border: 1px solid #1E79A1;
+    border-radius: 15px;
+    width: 150px;
+  
+  }
+
+  .btn-dark-category:hover, .btn-light-category:hover{
+    color: #ffffff;
+    background: #031145;
+  }
+  
+  .btn-light-category{
+    color: #1E79A1;
+    background-color: #ffffff;
+    border: 1px solid #1E79A1;
+    border-radius: 15px;
+    width: 150px;
+  }

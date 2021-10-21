@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin-users</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/admin-user.css">
+    <link rel="stylesheet" href="css/admin_nav_side_bar.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark d-lg-none feeds-btn-bg border-bottom">
+        <div class="container-fluid">
+            <a href="./index.html" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-dark text-decoration-none">
+                <img src="./images/Logo_white.svg" width="150px" alt="Logo"  class="">
+            </a>
+            <!-- toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- nav links -->
+            <div class="collapse navbar-collapse justify-content-end align-center" id="navbarNav">
+                <ul class="navbar-nav text-white ms-2">
+                    <li class="nav-item mb-2">
+                        <a href="./dashboard.html" class="nav-link active text-white" aria-current="page"> Dashboard </a>
+                        </li>
+                    <li class="nav-item mb-2">
+                        <a href="./polls.html" class="nav-link text-white">
+                        Polls
+                    </a></li>
+                    <li class="nav-item mb-2  bg-secondary rounded" >
+                        <a href="./admin-user.html" class="nav-link text-white">
+                        Users
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2" >
+                        <a href="./categories-admin.html" class="nav-link text-white">
+                        Categories
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="./message-admin.html" class="nav-link text-white">
+                        Messages
+                        </a>
+                    </li>
+                    <li class="nav-item " >
+                        <a href="./admin.html" class="nav-link text-white">
+                        Log out
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR DESKTOP -->
+    <nav class="d-none d-lg-block feeds-btn-bg fixed-top h-100 border-end" style="width: 230px;">
+        <div class="d-flex flex-column flex-shrink-0 p-3 pt-4">
+            <a href="./index.html" class="d-flex align-items-center ps-3 me-lg-auto link-dark text-decoration-none">
+                <img src="./images/Logo_white.svg" width="150px" alt="Logo"  class="">
+            </a>
+            <ul class="nav flex-column mb-auto ps-3 pt-5 mt-3 fw-bold">
+                <li class="nav-item mb-4">
+                    <a href="./dashboard.html" class="nav-link active text-white" aria-current="page">
+                    Dashboard
+                    </a>
+                </li>
+                <li class="nav-item mb-4">
+                    <a href="./polls.html" class="nav-link text-white">
+                    Polls
+                    </a>
+                </li>
+                <li class="nav-item mb-4  bg-secondary rounded" >
+                    <a href="./admin-user.html" class="nav-link text-white">
+                    Users
+                    </a>
+                </li>
+                <li class="nav-item mb-4" >
+                    <a href="./categories-admin.html" class="nav-link text-white">
+                    Categories
+                    </a>
+                </li>
+                <li class="nav-item mb-4">
+                    <a href="./message-admin.html" class="nav-link text-white">
+                    Messages
+                    </a>
+                </li>
+                <li class="nav-item " >
+                    <a href="./admin.html" class="nav-link text-white">
+                    Log out
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+ <!-- Sidebar End     -->
+<!-- beginning of nav  -->
+<main class="feeds-wrapper">
+    <nav class="navbar navbar-expand navbar-dark bg-chartpool col-12" aria-label="Fourth navbar example">
+        <div class="container">
+        <div class="collapse navbar-collapse" id="navbarsExample04">
+            <ul class="navbar-nav ms-auto mb-md-0 d-flex align-items-center ">
+            <li class="nav-item">
+                <a class="nav-link"  href="#"><img src="./images/notification _bell.png" class="rounded" width="25px" height="25px" alt="notification icon"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><img src="./images/Mask Group (1).png" class="rounded" width="50px" height="50px" alt="admin-icon"></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fw-bold active" href="#" id="dropdown04" aria-expanded="false">Admin</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown04">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                <li><a class="dropdown-item" href="#">Polls</a></li>
+                <li><a class="dropdown-item active" href="#">Users</a></li>
+                <li><a class="dropdown-item" href="#">Categories</a></li>
+                <li><a class="dropdown-item" href="#">Messages</a></li>
+                <li><a class="dropdown-item " href="#">Log out</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <section class="col col-lg-10 col-sm-10 col-md-10 mx-md-auto ">
+        <div class=" add-btn 4 my-4 c px-3 d-flex justify-content-between">
+            <!--button to add user -->
+                <button type="button" class="btn btn-primary btn-lg next-link mod-btn1" data-bs-toggle="modal" data-bs-target="#addUserModal" data-bs-whatever="">Add a user</button>
+                <div class="modal fade" id="addUserModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="buttonLabel" aria-hidden="true" >
+                    <div class="modal-dialog modal-lg modal-dialog-centered ">
+                        <div class="modal-content modal-cnt d-flex align-items-center flex-column justify-content-between align-content-center">
+                        <div class="modal-header d-flex align-items-center flex-column border-0">
+                            <h5 class="modal-title text-black text-center modal-heading fs-5" id="">Add A User</h5>
+                            <div class="user-img-container rounded-circle border-danger d-flex align-items-center justify-content-center "><a href="#"><img src="./images/face outline.png" alt="img-user" class="m-auto img-fluid"></a></div>
+                        </div>
+                        <div class="modal-body add-user-modal">
+                            <form class="container-fluid">
+                                <div  class="row mb-2 g-3">
+                                    <div class=" col-12 col-sm-12 col-md-12  col-lg-3">
+                                        <label for="fname" class=" form-label">First Name</label>
+                                    </div>
+                                    <div class="col col-sm-12 col-md-12 col-lg-9">
+                                        <input id="fname" type="text" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div  class="row mb-2 g-3">
+                                    <div class="col-12 col-sm-12 col-md-12  col-lg-3">
+                                        <label for="lname" class=" form-label">Last Name</label>
+                                    </div>
+                                    <div class="col col-sm-12 col-md-12 col-lg-9">
+                                        <input id="lname" type="text" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div  class="row mb-2 g-3">
+                                    <div class="col-12 col-sm-12 col-md-12  col-lg-3">
+                                        <label for="email-add" class=" form-label">Email Address</Address></label>
+                                    </div>
+                                    <div class="col col-sm-12 col-md-12 col-lg-9">
+                                        <input id="email-add" type="text" class=" form-control" required>
+                                    </div>
+                                </div>
+                                <div  class="row mb-2 g-3">
+                                    <div class="col-12 col-sm-12 col-md-12  col-lg-3">
+                                        <label for="region" class=" form-label"> Your Region</label>
+                                    </div>
+                                    <div class="col col-sm-12 col-md-12 col-lg-9">
+                                        <select id="region" name="region" class="form-select">
+                                            <option value="Nigeria">Nigeria</option>
+                                            <option value="United States of America">United States of America</option>
+                                            <option value="United Kingdom">United Kingdom</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div  class="row mb-2 g-3">
+                                    <div class="col-12 col-sm-12 col-md-12  col-lg-3">
+                                        <label for="mob-no" class=" form-label"> Mobile Number</label>
+                                    </div>
+                                    <div class="col col-sm-12 col-md-12 col-lg-9 d-flex justify-content-between ">
+                                        <select id="mob-no" name="country" class="form-select width-35 ">
+                                            <option value="Afganistan">Afghanistan(+93)</option>
+                                            <option value="Albania">Albania(+355)</option>
+                                            <option value="Nigeria" selected>Nigeria(+234)</option>
+                                            <option value="United Kingdom">United Kingdom(+44)</option>
+                                            <option value="United States of America">United States of America(+1)</option>
+                                        </select>
+                                        <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]-4 [0-9]-4" required class=" form-control width-60"> 
+                                    </div>
+                                </div>
+                                <div  class="row mb-2 g-3">
+                                    <div class="col-12 col-sm-12 col-md-12  col-lg-3">
+                                        <label for="user-gender" class=" form-label">Gender</label>
+                                    </div>
+                                    <div class="col col-sm-12 col-md-12 col-lg-9">
+                                        <select id="user-gender" name="region" class=" form-select">
+                                            <option value="Male" >Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
+                                </div> 
+                                <div class="row mb-2 g-3">
+                                    <div class="col-12 col-sm-12 col-md-12  col-lg-3">
+                                        <label for="dob-add" class="form-label">DOB</label>
+                                    </div>
+                                    <div class="col col-sm-12 col-md-12 col-lg-9 d-flex justify-content-between">
+                                        <select name="day" class="day width-30 form-select">
+                                            <option value="" selected></option>
+                                            <option value="1st">1st</option>
+                                            <option value="2nd">2nd</option>
+                                            <option value="3rd">3rd</option>
+                                            <option value="4th">4th</option>
+                                            <option value="5th">5th</option>
+                                            <option value="6th">6th</option>
+                                            <option value="7th">7th</option>
+                                            <option value="8th">8th</option>
+                                            <option value="9th">9th</option>
+                                            <option value="10th">10th</option>
+                                            <option value="11th">11th</option>
+                                            <option value="12th">12th</option>
+                                            <option value="13th">13th</option>
+                                            <option value="14th">14th</option>
+                                            <option value="15th">15th</option>
+                                            <option value="16th">16th</option>
+                                            <option value="17th">17th</option>
+                                            <option value="18th">18th</option>
+                                            <option value="19th">19th</option>
+                                            <option value="20th">20th</option>
+                                            <option value="21st">21st</option>
+                                            <option value="22nd">22nd</option>
+                                            <option value="23rd">23rd</option>
+                                            <option value="24th">24th</option>
+                                            <option value="25th">25th</option>
+                                            <option value="26th">26th</option>
+                                            <option value="27th">27th</option>
+                                            <option value="28th">28th</option>
+                                            <option value="29th">29th</option>
+                                            <option value="30th">30th</option>
+                                            <option value="31st">31st</option>
+                                        </select>
+                                        <select name="month" class="width-30 form-select">
+                                        <option value="Jan">Jan</option>  
+                                        <option value="Feb">Feb</option>  
+                                        <option value="Mar">Mar</option>  
+                                        <option value="Apr">Apr</option>  
+                                        <option value="May">May</option>  
+                                        <option value="June">June</option>  
+                                        <option value="July">July</option>  
+                                        <option value="Aug">Aug</option>  
+                                        <option value="Sept">Sept</option>  
+                                        <option value="Oct">Oct</option>  
+                                        <option value="Nov">Nov</option>  
+                                        <option value="Dec">Dec</option>  
+                                        </select>
+                                        <input type="number" min="1930" max="2100" class=" form-control width-30" aria-required="true">
+                                    </div>
+                                </div>
+                            </form>
+                            </div>
+                            <div class="modal-footer border-0 d-flex justify-content-evenly w-100">
+                                <button type="submit" class="btn next-link mod-btn1 btn-lg text-white" data-bs-dismiss="modal">Add a user</button>
+                                <button type="button" class="btn  btn-lg text-dark border-primary btn-cancel" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <input type="search" placeholder="search" class="search-box width-35 px-3">
+        </div>
+    <!-- End of add user modal -->
+
+    <!-- Modal to view user -->
+
+        <div class="modal fade" id="viewUser" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+            <div class="modal-dialog modal-lg modal-dialog-centered ">
+                <div class="modal-content modal-cnt">
+                <div class="modal-header d-flex flex-column align-items-center border-0">
+                    <div class="header-btn-combo d-flex w-50  align-items-center justify-content-between ms-auto me-5 ">
+                        <h5 class="modal-title text-black text-center modal-heading fs-5" id="viewUserLabel">ID 5003</h5>
+                        <a href="#profile-menu" data-bs-toggle="modal" data-bs-target="#profile-menu"> <div class="round-menu d-flex flex-column justify-content-between align-items-center ">
+                            <span class="rounded bg-black"></span>
+                            <span class="rounded bg-black"></span>
+                            <span class="rounded bg-black"></span>
+                        </div></a>
+                    </div>    
+                    <div class="user-img-container rounded-circle border-danger d-flex align-items-center justify-content-center "><img src="./images/Mask_adm.png" alt="img-user" class="m-auto img-fluid"></div>
+                </div>
+                <div class="modal-body view-user-modal mx-auto">
+                    <form class="container-fluid">
+                        <div  class="row mb-2 g-3">
+                            <div class="col-12 col-sm-12 col-md-12  col-lg-3">
+                                <label for="fname" class=" form-label">First Name</label>
+                            </div>
+                            <div class="col col-sm-12 col-md-12 col-lg-9">
+                                <input id="fname" type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        <div  class="row mb-2 g-3">
+                            <div class="col-12 col-sm-12 col-md-12  col-lg-3">
+                                <label for="lname" class=" form-label">Last Name</label>
+                            </div>
+                            <div class="col col-sm-12 col-md-12 col-lg-9">
+                                <input id="lname" type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        <div  class="row mb-2 g-3">
+                            <div class="col-12 col-sm-12 col-md-12  col-lg-3">
+                                <label for="email-add" class=" form-label">Email Address</Address></label>
+                            </div>
+                            <div class="col col-sm-12 col-md-12 col-lg-9">
+                                <input id="email-add" type="text" class=" form-control" required>
+                            </div>
+                        </div>
+                        <div  class="row mb-2 g-3">
+                            <div class="col-12 col-sm-12 col-md-12  col-lg-3">
+                                <label for="region" class=" form-label"> Your Region</label>
+                            </div>
+                            <div class="col col-sm-12 col-md-12 col-lg-9">
+                                <select id="region" name="region" class="form-select">
+                                    <option value="Nigeria">Nigeria</option>
+                                    <option value="United States of America">United States of America</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div  class="row mb-2 g-3">
+                            <div class="col-12 col-sm-12 col-md-12  col-lg-3">
+                                <label for="mob-no" class=" form-label"> Mobile Number</label>
+                            </div>
+                            <div class="col col-sm-12 col-md-12 col-lg-9 d-flex justify-content-between">
+                                <select id="mob-no" name="country" class="form-select width-35 ">
+                                    <option value="Afganistan">Afghanistan(+93)</option>
+                                    <option value="Albania">Albania(+355)</option>
+                                    <option value="Nigeria" selected>Nigeria(+234)</option>
+                                    <option value="United Kingdom">United Kingdom(+44)</option>
+                                    <option value="United States of America">United States of America(+1)</option>
+                                </select>
+                                <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]-4 [0-9]-4" required class=" form-control width-60"> 
+                            </div>
+                        </div>
+                        <div  class="row mb-2 g-3">
+                            <div class="col-12 col-sm-12 col-md-12  col-lg-3">
+                                <label for="user-gender" class=" form-label">Gender</label>
+                            </div>
+                            <div class="col col-sm-12 col-md-12 col-lg-9">
+                                <select id="user-gender" name="region" class=" form-select">
+                                    <option value="Male" >Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                        </div> 
+                        <div class="row mb-2 g-3">
+                            <div class="col-12 col-sm-12 col-md-12  col-lg-3">
+                                <label for="dob-add" class="form-label">DOB</label>
+                            </div>
+                            <div class="col col-sm-12 col-md-12 col-lg-9 d-flex justify-content-between">
+                                <select name="day" class="day width-30 form-select">
+                                    <option value="" selected></option>
+                                    <option value="1st">1st</option>
+                                    <option value="2nd">2nd</option>
+                                    <option value="3rd">3rd</option>
+                                    <option value="4th">4th</option>
+                                    <option value="5th">5th</option>
+                                    <option value="6th">6th</option>
+                                    <option value="7th">7th</option>
+                                    <option value="8th">8th</option>
+                                    <option value="9th">9th</option>
+                                    <option value="10th">10th</option>
+                                    <option value="11th">11th</option>
+                                    <option value="12th">12th</option>
+                                    <option value="13th">13th</option>
+                                    <option value="14th">14th</option>
+                                    <option value="15th">15th</option>
+                                    <option value="16th">16th</option>
+                                    <option value="17th">17th</option>
+                                    <option value="18th">18th</option>
+                                    <option value="19th">19th</option>
+                                    <option value="20th">20th</option>
+                                    <option value="21st">21st</option>
+                                    <option value="22nd">22nd</option>
+                                    <option value="23rd">23rd</option>
+                                    <option value="24th">24th</option>
+                                    <option value="25th">25th</option>
+                                    <option value="26th">26th</option>
+                                    <option value="27th">27th</option>
+                                    <option value="28th">28th</option>
+                                    <option value="29th">29th</option>
+                                    <option value="30th">30th</option>
+                                    <option value="31st">31st</option>
+                                </select>
+                                <select name="month" class="width-30 form-select">
+                                <option value="Jan">Jan</option>  
+                                <option value="Feb">Feb</option>  
+                                <option value="Mar">Mar</option>  
+                                <option value="Apr">Apr</option>  
+                                <option value="May">May</option>  
+                                <option value="June">June</option>  
+                                <option value="July">July</option>  
+                                <option value="Aug">Aug</option>  
+                                <option value="Sept">Sept</option>  
+                                <option value="Oct">Oct</option>  
+                                <option value="Nov">Nov</option>  
+                                <option value="Dec">Dec</option>  
+                                </select>
+                                <input type="number" min="1930" max="2100" class=" form-control width-30" aria-required="true">
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                    <div class="modal-footer border-0 d-flex justify-content-evenly w-100">
+                        <button type="submit" class="btn next-link mod-btn1 btn-lg text-white" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn  btn-lg text-dark border-primary btn-cancel" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of view user modal -->
+
+        <!-- View profile Menu -->
+
+        <div class="modal fade" id="profile-menu" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="profileMenuLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+            <div class="modal-content modal-cnt display-6 text-uppercase">
+                <div class="modal-body">
+                    <a href="#block-user" class=" text-decoration-none "><h6 class="fs-5 view-link ps-5 text-dark " data-bs-toggle="modal" data-bs-target="#block-user">block</h6></a>
+                    <hr class="border-btm border-dark border-bottom">
+                    <a href="#edit-user" class=" text-decoration-none "><h6  class="fs-5 view-link ps-5 text-dark"data-bs-toggle="modal" data-bs-target="#edit-user">edit</h6></a>
+                    <hr class="border-btm border-dark border-bottom">
+                    <a href="#unblock-user" class=" text-decoration-none "><h6 class="fs-5 view-link ps-5 text-black" data-bs-toggle="modal" data-bs-target="#unblock-user">unblock user</h6></a>
+                    <hr class="border-btm border-dark border-bottom"> 
+                    <a href="#delete-user" class=" text-decoration-none"><h6 class="fs-5 view-link ps-5 text-dark" data-bs-toggle="modal" data-bs-target="#delete-user">delete</h6></a>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <!-- End of View profile Menu -->
+
+        <!-- Modal for block user -->
+        
+        <div class="modal fade" id="block-user" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="blockUserLabel" aria-hidden="true">
+            <div class="modal-dialog user-mod">
+            <div class="modal-content modal-cnt">
+                <div class="modal-body text-center">
+                <h4>Blocked users would not be able to use the platform.</h4>
+                <h4>Do you want to block User_XYZ?</h4>
+                </div>
+                <div class="modal-footer border-0 d-flex justify-content-evenly w-100">
+                    <button type="submit" class="btn next-link border-primary mod-btn1 btn-lg text-white" data-bs-dismiss="modal">Yes, Block</button>
+                    <button type="button" class="btn  btn-lg text-dark border-primary  btn-c2" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- End of Modal for block user -->
+
+        <!-- Modal for edit user  -->
+        <div class="modal fade" id="edit-user" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="editUserLabel" aria-hidden="true">
+            <div class="modal-dialog user-mod">
+            <div class="modal-content modal-cnt">
+                <div class="modal-body text-center">
+                <h4>Do you want to edit User_XYZ's profile?</h4>
+                </div>
+                <div class="modal-footer border-0 d-flex justify-content-evenly w-100">
+                    <button type="submit" class="btn next-link border-primary mod-btn1 btn-lg text-white" data-bs-dismiss="modal">Yes, Okay</button>
+                    <button type="button" class="btn  btn-lg text-dark border-primary  btn-c2" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- End of Modal for edit user  -->
+
+        <!-- Modal for unblock user -->
+        <div class="modal fade" id="unblock-user" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="unblockUserLabel" aria-hidden="true">
+            <div class="modal-dialog user-mod">
+            <div class="modal-content modal-cnt">
+                <div class="modal-body text-center">
+                <h4>Do you want to unblock User_XYZ?</h4>
+                </div>
+                <div class="modal-footer border-0 d-flex justify-content-evenly w-100">
+                    <button type="submit" class="btn next-link border-primary mod-btn1 btn-lg text-white" data-bs-dismiss="modal">Unblock user</button>
+                    <button type="button" class="btn  btn-lg text-dark border-primary  btn-c2" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- End of Modal for unblock user  -->
+
+        <!-- Modal for delete user -->
+        <div class="modal fade" id="delete-user" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="deleteUserLabel" aria-hidden="true">
+            <div class="modal-dialog user-mod">
+            <div class="modal-content modal-cnt">
+                <div class="modal-body text-center">
+                <h4>Do you want to delete User_XYZ?</h4>
+                </div>
+                <div class="modal-footer border-0 d-flex justify-content-evenly w-100">
+                    <button type="submit" class="btn next-link border-primary mod-btn1 btn-lg text-white" data-bs-dismiss="modal">Delete</button>
+                    <button type="button" class="btn  btn-lg text-dark border-primary  btn-c2" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- End of Modal for delete user  -->
+
+        <!-- Table section -->
+        <div class=" px-lg-4 px-sm-1 d-none d-md-block col-12">
+            <table class=" table table-responsive  table-bordered border-dark text-center user-tab rounded-3">
+                <thead>
+                    <tr class="bold">
+                        <th scope="col" class=" fw-bold">S/N</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone number</th>
+                        <th scope="col">Number of polls</th>
+                        <th scope="col"> Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>0024</td>
+                        <td>Anthony Hopkins Daniel</td>
+                        <td>anthonyhopkins@gmail.com</td>
+                        <td>+2347054323456</td>
+                        <td>789</td>
+                        <td><a href="#viewUser" class="view-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever="" >view</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>0024</td>
+                        <td>Anthony Hopkins Daniel</td>
+                        <td>anthonyhopkins@gmail.com</td>
+                        <td>+2347054323456</td>
+                        <td>789</td>
+                        <td><a href="#viewUser" class="view-link text-decoration-none text-dark"data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever=""  >view</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>0024</td>
+                        <td>Anthony Hopkins Daniel</td>
+                        <td>anthonyhopkins@gmail.com</td>
+                        <td>+2347054323456</td>
+                        <td>789</td>
+                        <td><a href="#viewUser" class="view-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever="" >view</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>0024</td>
+                        <td>Anthony Hopkins Daniel</td>
+                        <td>anthonyhopkins@gmail.com</td>
+                        <td>+2347054323456</td>
+                        <td>789</td>
+                        <td><a href="#viewUser" class="view-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever="" >view</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>0024</td>
+                        <td>Anthony Hopkins Daniel</td>
+                        <td>anthonyhopkins@gmail.com</td>
+                        <td>+2347054323456</td>
+                        <td>789</td>
+                        <td><a href="#viewUser" class="view-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever="" >view</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>0024</td>
+                        <td>Anthony Hopkins Daniel</td>
+                        <td>anthonyhopkins@gmail.com</td>
+                        <td>+2347054323456</td>
+                        <td>789</td>
+                        <td><a href="#viewUser" class="view-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever="" >view</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>0024</td>
+                        <td>Anthony Hopkins Daniel</td>
+                        <td>anthonyhopkins@gmail.com</td>
+                        <td>+2347054323456</td>
+                        <td>789</td>
+                        <td><a href="#viewUser" class="view-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever=""  >view</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>0024</td>
+                        <td>Anthony Hopkins Daniel</td>
+                        <td>anthonyhopkins@gmail.com</td>
+                        <td>+2347054323456</td>
+                        <td>789</td>
+                        <td><a href="#viewUser" class="view-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever=""  >view</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>0024</td>
+                        <td>Anthony Hopkins Daniel</td>
+                        <td>anthonyhopkins@gmail.com</td>
+                        <td>+2347054323456</td>
+                        <td>789</td>
+                        <td><a href="#viewUser" class="view-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever="" >view</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td>0024</td>
+                        <td>Anthony Hopkins Daniel</td>
+                        <td>anthonyhopkins@gmail.com</td>
+                        <td>+2347054323456</td>
+                        <td>789</td>
+                        <td><a href="#viewUser" class="view-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever="" >view</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container d-md-none">
+            <div class="table-responsive">
+                <table class="table  polls-table table-bordered">
+                    <thead>
+                        <tr class="bold">
+                            <th scope="col" class=" fw-bold">S/N</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone number</th>
+                            <th scope="col">Number of polls</th>
+                            <th scope="col"> Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody  id="pollstable">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>0024</td>
+                            <td>Anthony Hopkins Daniel</td>
+                            <td>anthonyhopkins@gmail.com</td>
+                            <td>+2347054323456</td>
+                            <td>789</td>
+                            <td><a href="#viewUser" class="view-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever="" >view</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>0024</td>
+                            <td>Anthony Hopkins Daniel</td>
+                            <td>anthonyhopkins@gmail.com</td>
+                            <td>+2347054323456</td>
+                            <td>789</td>
+                            <td><a href="#viewUser" class="view-link text-decoration-none text-dark"data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever=""  >view</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>0024</td>
+                            <td>Anthony Hopkins Daniel</td>
+                            <td>anthonyhopkins@gmail.com</td>
+                            <td>+2347054323456</td>
+                            <td>789</td>
+                            <td><a href="#viewUser" class="view-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever="" >view</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>0024</td>
+                            <td>Anthony Hopkins Daniel</td>
+                            <td>anthonyhopkins@gmail.com</td>
+                            <td>+2347054323456</td>
+                            <td>789</td>
+                            <td><a href="#viewUser" class="view-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever="" >view</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>0024</td>
+                            <td>Anthony Hopkins Daniel</td>
+                            <td>anthonyhopkins@gmail.com</td>
+                            <td>+2347054323456</td>
+                            <td>789</td>
+                            <td><a href="#viewUser" class="view-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever="" >view</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>0024</td>
+                            <td>Anthony Hopkins Daniel</td>
+                            <td>anthonyhopkins@gmail.com</td>
+                            <td>+2347054323456</td>
+                            <td>789</td>
+                            <td><a href="#viewUser" class="view-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever="" >view</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>0024</td>
+                            <td>Anthony Hopkins Daniel</td>
+                            <td>anthonyhopkins@gmail.com</td>
+                            <td>+2347054323456</td>
+                            <td>789</td>
+                            <td><a href="#viewUser" class="view-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever=""  >view</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8</th>
+                            <td>0024</td>
+                            <td>Anthony Hopkins Daniel</td>
+                            <td>anthonyhopkins@gmail.com</td>
+                            <td>+2347054323456</td>
+                            <td>789</td>
+                            <td><a href="#viewUser" class="view-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever=""  >view</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">9</th>
+                            <td>0024</td>
+                            <td>Anthony Hopkins Daniel</td>
+                            <td>anthonyhopkins@gmail.com</td>
+                            <td>+2347054323456</td>
+                            <td>789</td>
+                            <td><a href="#viewUser" class="view-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever="" >view</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10</th>
+                            <td>0024</td>
+                            <td>Anthony Hopkins Daniel</td>
+                            <td>anthonyhopkins@gmail.com</td>
+                            <td>+2347054323456</td>
+                            <td>789</td>
+                            <td><a href="#viewUser" class="view-link text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#viewUser" data-bs-whatever="" >view</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class=" entries d-flex justify-content-between align-items-center col-12 px-4">
+            <p class=" entries-showing text-black fs-6 fw-bold">showing 1 to 10 of 1500 entries</p>
+            <nav aria-label="Standard pagination example">
+                <ul class="pagination">
+                <li class="page-item">
+                    <!-- <a class="page-link border-0" href="#" aria-label="Previous">
+                    <span aria-hidden="true">«</span>
+                    </a> -->
+                </li>
+                <li class="page-item"><a class="page-link next-link" href="#">1</a></li>
+                <li class="page-item">
+                    <a class="page-link border-0 pg-link fw-bolder" href="#" aria-label="Next">
+                    <span aria-hidden="true">»</span>
+                    </a>
+                </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+</main>
+   
+   <!-- End od Nav -->
+    
+    <script src="script/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+main{
+    background: #eeee;
+  }
+  .profile-btn{
+    background: #09174B;
+    border-radius: 16px;
+    border: 1px solid #09174B;
+    width: 180px;
+  }
+  
+  .user-que{
+    margin-bottom: 280px;
+  }
+  
+  a{
+    text-decoration: none;
+    color: #000;
+  }
+  
+  
+  
+  @media screen and (max-width: 480px) {
+  
+  
+    .but2{
+    display: none;
+    }
+  }
+  @media screen and (min-width: 480px) {
+  
+  .but1{
+    display:none
+  }
+  
+  }
+  

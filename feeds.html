@@ -1,16 +1,1017 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>>Chartpoll - Feeds</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>feeds</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/feed.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- SIDEBAR MOBILE -->
+    <nav class="navbar navbar-light bg-light d-lg-none feeds-bg border-bottom">
+      <div class="container-fluid">
+        <a
+          href="./index.html"
+          class="
+            d-flex
+            align-items-center
+            mb-3 mb-lg-0
+            me-lg-auto
+            link-dark
+            text-decoration-none
+          "
+        >
+          <img src="./feeds-image/envelope.png" alt="Logo" class="" />
+          <span class="fw-bold text-secondary ps-2 fs-4">Chartpoll</span>
+        </a>
+        <!-- toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- nav links -->
+        <div
+          class="collapse navbar-collapse justify-content-end align-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav text-white ms-2">
+            <li class="nav-item">
+              <a class="nav-link poll"
+                ><img
+                  src="./feeds-image/Vector (7).png"
+                  width="15px"
+                  alt="New Poll"
+                /><span class="text-secondary ps-4 poll pt-5">New Poll</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><img
+                  src="./feeds-image/Group 20.png"
+                  width="15px"
+                  alt="All Feeds"
+                />
+                <span class="text-secondary ps-4 pt-5">All Feeds</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><img
+                  src="./feeds-image/Vector (5).png"
+                  width="15px"
+                  alt="Technology"
+                /><span class="text-secondary ps-4 pt-5">Technology</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><img
+                  src="./feeds-image/Vector (6).png"
+                  width="15px"
+                  alt="Politics"
+                /><span class="text-secondary ps-4 pt-5">Politics</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><img
+                  src="./feeds-image/Vector (3).png"
+                  width="15px"
+                  alt="Movies"
+                /><span class="text-secondary ps-4 pt-5">Movies</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><img
+                  src="./feeds-image/Group 18.png"
+                  width="15px"
+                  alt="Business"
+                /><span class="text-secondary ps-4 pt-5">Business</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./profile.html"
+                ><img
+                  src="./feeds-image/Vector (4).png"
+                  width="15px"
+                  alt="Profile"
+                /><span class="text-secondary ps-4 pt-5">Profile</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBAR DESKTOP -->
+    <nav
+      class="d-none d-lg-block feeds-bg fixed-top h-100 border-end reduce-width"
+      style="width: 130px"
+    >
+      <div class="d-flex flex-column flex-shrink-0 p-3 pt-4">
+        <span
+          class="
+            d-flex
+            align-items-center
+            mb-3 mb-lg-0
+            mt-2
+            me-lg-auto
+            link-dark
+            text-decoration-none
+          "
+        >
+          <img src="./feeds-image/envelope.png" alt="Logo" class="ms-4" />
+          <span
+            class="fw-bold text-secondary ps-2 fs-4 sidebar-text sidebar-hidden"
+            ><a class="text-decoration-none text-dark" href="./index.html"
+              >Chartpoll</a
+            ></span
+          >
+          <span id="sidebar-button1" class="ms-4 sidebar-show"
+            ><img src="./feeds-image/Vector (9).png" alt="open"
+          /></span>
+          <span id="sidebar-button2" class="ms-4 sidebar-hidden"
+            ><img src="./feeds-image/Vector (8).png" alt="close"
+          /></span>
+        </span>
+        <ul class="nav flex-column mb-auto ps-3 pt-5 mt-3">
+          <li class="mb-3">
+            <a class="nav-link poll active-bar"
+              ><img src="./feeds-image/Vector (7).png" alt="New Poll" /><span
+                class="text-secondary ms-4 mt-5 sidebar-text sidebar-hidden"
+                >New Poll</span
+              ></a
+            >
+          </li>
+          <li class="mb-3">
+            <a href="feeds.html" class="nav-link active-bar"
+              ><img src="./feeds-image/Group 20.png" alt="All Feeds" />
+              <span class="text-secondary ms-4 mt-5 sidebar-text sidebar-hidden"
+                >All Feeds</span
+              >
+            </a>
+          </li>
+          <li class="mb-3">
+            <a href="#" class="nav-link active-bar"
+              ><img src="./feeds-image/Vector (5).png" alt="Technology" /><span
+                class="text-secondary ms-4 mt-5 sidebar-text sidebar-hidden"
+                >Technology</span
+              ></a
+            >
+          </li>
+          <li class="mb-3">
+            <a href="#" class="nav-link active-bar"
+              ><img src="./feeds-image/Vector (6).png" alt="Politics" /><span
+                class="text-secondary ms-4 mt-5 sidebar-text sidebar-hidden"
+                >Politics</span
+              ></a
+            >
+          </li>
+          <li class="mb-3">
+            <a href="#" class="nav-link active-bar"
+              ><img src="./feeds-image/Vector (3).png" alt="Movies" /><span
+                class="text-secondary ms-4 mt-5 sidebar-text sidebar-hidden"
+                >Movies</span
+              ></a
+            >
+          </li>
+          <li class="mb-3">
+            <a href="#" class="nav-link active-bar"
+              ><img src="./feeds-image/Group 18.png" alt="Business" /><span
+                class="text-secondary ms-4 mt-5 sidebar-text sidebar-hidden"
+                >Business</span
+              ></a
+            >
+          </li>
+          <li class="">
+            <a href="./profile.html" class="nav-link active-bar"
+              ><img src="./feeds-image/Vector (4).png" alt="Profile" /><span
+                class="text-secondary ms-4 mt-5 sidebar-text sidebar-hidden"
+                >Profile</span
+              ></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- NAVBAR -->
+    <main class="feeds-wrapper">
+      <div
+        class="
+          pt-4
+          pb-3
+          d-flex
+          flex-column flex-md-row
+          gap-4
+          justify-content-between
+          px-5
+          feeds-bg
+          border
+        "
+      >
+        <form class="d-flex align-items-center">
+          <div class="dropdown d-none d-md-inline-block">
+            <span
+              class="
+                dropdown-toggle
+                rounded-pill
+                bg-white
+                py-2
+                px-4
+                latest-menu
+              "
+              id="dropdownMenu2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >Latest</span
+            >
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <input
+            type="search"
+            placeholder="Search a pool"
+            class="form-control rounded-pill pe-5 ps-4 ms-md-5"
+          />
+        </form>
+        <div class="">
+          <a href="./notificationsPage.html"
+            ><span
+              ><img
+                src="./image/Vector.png"
+                alt="notification"
+                width="25px" /><img
+                src="./image/Group 23.png"
+                alt=""
+                class="notify-num" /></span
+          ></a>
+          <span
+            ><a href="./profile.html"
+              ><img
+                src="./image/Mask Group (1).png"
+                alt="profile picture"
+                width="30px"
+                class="ms-3" /></a
+          ></span>
+          <div class="dropdown d-inline-block">
+            <span
+              class="dropdown-toggle fw-bold"
+              id="dropdownMenu2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Senibo
+            </span>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- NAVBAR ENDS HERE -->
+
+      <!-- PUT YOUR CONTENT BELOW -->
+      <div class="row mx-4 mt-1 mb-3 g-3">
+        <div class="col-xl-9">
+          <div
+            class="
+              form
+              d-flex
+              flex-column
+              align-items-center
+              flex-md-row
+              gap-2
+              feeds-bg
+              p-3
+              mb-3
+              border
+            "
+          >
+            <img
+              src="./image/Mask Group (1).png"
+              alt="profile picture"
+              width="50px"
+            />
+            <input
+              type="text"
+              name="question"
+              placeholder="What do you want to ask?"
+              class="form-control w-100 text-danger px-3 mx-md-3 shape-radius"
+            />
+            <button
+              type="submit"
+              class="
+                text-white
+                border-0
+                feeds-btn-bg
+                w-25
+                d-none d-lg-block
+                p-2
+                shape-radius
+                poll
+              "
+            >
+              Create Poll
+            </button>
+            <button
+              type="submit"
+              class="
+                text-white
+                border-0
+                feeds-btn-bg
+                w-50
+                d-none d-md-block d-lg-none
+                p-2
+                shape-radius
+                poll
+              "
+            >
+              Create Poll
+            </button>
+            <button
+              type="submit"
+              class="
+                text-white
+                border-0
+                feeds-btn-bg
+                w-100
+                d-md-none
+                p-2
+                shape-radius
+                poll
+              "
+            >
+              Create Poll
+            </button>
+          </div>
+          <div class="feeds-bg p-3 border">
+            <div class="mb-4 d-flex flex-column flex-md-row">
+              <div class="">
+                <img
+                  src="./feeds-image/SOF_1117a 1.png"
+                  alt="profile picture"
+                  class="rounded-circle"
+                  width="50px"
+                />
+              </div>
+              <div class="ms-md-3 mt-2 mt-md-0">
+                <p class="mb-0">
+                  Obi Smart
+                  <span class="text-secondary ubuntu-feeds-font"
+                    >@obismart<span class="ms-3">-3days</span></span
+                  >
+                </p>
+                <p class="mb-0 text-secondary ubuntu-feeds-font">#technology</p>
+                <p class="ubuntu-feeds-font">
+                  I want to generate a mockup text like “lorem ipsum” but I want
+                  to use someting local since that is what is currently on
+                  board. What Nigerian language do you think suits best?
+                </p>
+                <form class="ms-4 form-check ubuntu-feeds-font">
+                  <input
+                    type="radio"
+                    name=""
+                    id=""
+                    class="form-check-input border-2 border-dark"
+                  /><label class="form-check-label mb-2">Igbo</label><br />
+                  <input
+                    type="radio"
+                    name=""
+                    id=""
+                    class="form-check-input border-2 border-dark"
+                  /><label class="form-check-label mb-2">Ijaw</label><br />
+                  <input
+                    type="radio"
+                    name=""
+                    id=""
+                    class="form-check-input border-2 border-dark"
+                  /><label class="form-check-label mb-2">Yoruba</label><br />
+                  <input
+                    type="radio"
+                    name=""
+                    id=""
+                    class="form-check-input border-2 border-dark"
+                  /><label class="form-check-label mb-2">Hausa</label>
+                </form>
+                <div class="ubuntu-feeds-font mt-2">
+                  <span class="me-2"
+                    ><img src="./feeds-image/Vector (10).png" alt="" /><span
+                      class="ms-1"
+                      >100</span
+                    ></span
+                  >
+                  <span
+                    ><img src="./feeds-image/Group 39.png" alt="" /><span
+                      class="ms-1"
+                      >320</span
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="mb-4 d-flex flex-column flex-md-row">
+              <div class="">
+                <img
+                  src="./feeds-image/SOF_5770a-01 1.png"
+                  alt="profile picture"
+                  class="rounded-circle"
+                  width="50px"
+                />
+              </div>
+              <div class="ms-md-3 mt-2 mt-md-0">
+                <p class="mb-0">
+                  Emi Tubo<span class="text-secondary ubuntu-feeds-font"
+                    >@superemi<span class="ms-3">-2days</span></span
+                  >
+                </p>
+                <p class="mb-0 text-secondary ubuntu-feeds-font">#marriage</p>
+                <p class="ubuntu-feeds-font">
+                  If you find out say your husband no sabi Lorem ipsum dolor sit
+                  amet, consectetur adipiscing elit, sed do eiusmod what will
+                  you do?
+                </p>
+                <form class="ms-4 form-check ubuntu-feeds-font">
+                  <input
+                    type="radio"
+                    name=""
+                    id=""
+                    class="form-check-input border-2 border-dark"
+                  /><label class="form-check-label mb-2"
+                    >Leave the marriage</label
+                  ><br />
+                  <input
+                    type="radio"
+                    name=""
+                    id=""
+                    class="form-check-input border-2 border-dark"
+                  /><label class="form-check-label mb-2">Sue him to court</label
+                  ><br />
+                  <input
+                    type="radio"
+                    name=""
+                    id=""
+                    class="form-check-input border-2 border-dark"
+                  /><label class="form-check-label mb-2"
+                    >Report to his friends</label
+                  ><br />
+                  <input
+                    type="radio"
+                    name=""
+                    id=""
+                    class="form-check-input border-2 border-dark"
+                  /><label class="form-check-label mb-2">See a doctor</label>
+                </form>
+                <div class="ubuntu-feeds-font mt-2">
+                  <span class="me-2"
+                    ><img src="./feeds-image/Vector (10).png" alt="" /><span
+                      class="ms-1"
+                      >500</span
+                    ></span
+                  >
+                  <span
+                    ><img src="./feeds-image/Group 39.png" alt="" /><span
+                      class="ms-1"
+                      >110</span
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="mb-4 d-flex flex-column flex-md-row">
+              <div class="">
+                <img
+                  src="./feeds-image/SOF_1117a 1.png"
+                  alt="profile picture"
+                  class="rounded-circle"
+                  width="50px"
+                />
+              </div>
+              <div class="ms-md-3 mt-2 mt-md-0">
+                <p class="mb-0">
+                  Obi Smart
+                  <span class="text-secondary ubuntu-feeds-font"
+                    >@obismart<span class="ms-3">-3days</span></span
+                  >
+                </p>
+                <p class="mb-0 text-secondary ubuntu-feeds-font">#technology</p>
+                <p class="ubuntu-feeds-font">
+                  I want to generate a mockup text like “lorem ipsum” but I want
+                  to use someting local since that is what is currently on
+                  board. What Nigerian language do you think suits best?
+                </p>
+                <form class="ms-4 form-check ubuntu-feeds-font">
+                  <input
+                    type="radio"
+                    name=""
+                    id=""
+                    class="form-check-input border-2 border-dark"
+                  /><label class="form-check-label mb-2">Igbo</label><br />
+                  <input
+                    type="radio"
+                    name=""
+                    id=""
+                    class="form-check-input border-2 border-dark"
+                  /><label class="form-check-label mb-2">Ijaw</label><br />
+                  <input
+                    type="radio"
+                    name=""
+                    id=""
+                    class="form-check-input border-2 border-dark"
+                  /><label class="form-check-label mb-2">Yoruba</label><br />
+                  <input
+                    type="radio"
+                    name=""
+                    id=""
+                    class="form-check-input border-2 border-dark"
+                  /><label class="form-check-label mb-2">Hausa</label>
+                </form>
+                <div class="ubuntu-feeds-font mt-2">
+                  <span class="me-2"
+                    ><img src="./feeds-image/Vector (10).png" alt="" /><span
+                      class="ms-1"
+                      >100</span
+                    ></span
+                  >
+                  <span
+                    ><img src="./feeds-image/Group 39.png" alt="" /><span
+                      class="ms-1"
+                      >320</span
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3">
+          <div class="row align-items-baseline justify-content-evenly ms-xl-2">
+            <div class="col-md-5 col-xl-12 feeds-bg border p-3">
+              <p class="ubuntu-feeds-font">Who to follow</p>
+              <div
+                class="
+                  d-flex
+                  justify-content-center
+                  align-items-baseline
+                  gap-2 gap-sm-3
+                  border-bottom border-2
+                "
+              >
+                <div>
+                  <img
+                    src="./image/Mask Group (1).png"
+                    alt="profile picture"
+                    width="50px"
+                  />
+                </div>
+                <p class="ubuntu-feeds-font lh-1">
+                  Emi Tubo
+                  <span class="d-block lh-0 text-secondary">@superemi</span>
+                </p>
+                <div>
+                  <button
+                    type="submit"
+                    class="btn feeds-btn-bg text-white py-1 rounded-pill px-4"
+                  >
+                    Follow
+                  </button>
+                </div>
+              </div>
+              <div
+                class="
+                  d-flex
+                  justify-content-center
+                  align-items-baseline
+                  gap-2 gap-sm-3
+                  border-bottom border-2
+                  mt-3
+                "
+              >
+                <div>
+                  <img
+                    src="./image/Mask Group (1).png"
+                    alt="profile picture"
+                    width="50px"
+                  />
+                </div>
+                <p class="ubuntu-feeds-font lh-1">
+                  Emi Tubo
+                  <span class="d-block lh-0 text-secondary">@superemi</span>
+                </p>
+                <div>
+                  <button
+                    type="submit"
+                    class="btn feeds-btn-bg text-white py-1 rounded-pill px-4"
+                  >
+                    Follow
+                  </button>
+                </div>
+              </div>
+              <div
+                class="
+                  d-flex
+                  justify-content-center
+                  align-items-baseline
+                  gap-2 gap-sm-3
+                  border-bottom border-2
+                  mt-3
+                "
+              >
+                <div>
+                  <img
+                    src="./image/Mask Group (1).png"
+                    alt="profile picture"
+                    width="50px"
+                  />
+                </div>
+                <p class="ubuntu-feeds-font lh-1">
+                  Emi Tubo
+                  <span class="d-block lh-0 text-secondary">@superemi</span>
+                </p>
+                <div>
+                  <button
+                    type="submit"
+                    class="btn feeds-btn-bg py-1 text-white rounded-pill px-4"
+                  >
+                    Follow
+                  </button>
+                </div>
+              </div>
+              <a
+                href="#"
+                class="
+                  d-block
+                  text-decoration-none text-end
+                  mt-3
+                  feeds-text
+                  ubuntu-feeds-font
+                "
+                >See More</a
+              >
+            </div>
+            <div class="col-md-5 col-xl-12 feeds-bg border p-3 mt-3">
+              <p class="ubuntu-feeds-font">Top Feeds</p>
+              <div
+                class="
+                  d-flex
+                  justify-content-center
+                  align-items-baseline
+                  gap-2 gap-sm-3
+                  border-bottom border-2
+                "
+              >
+                <div>
+                  <img
+                    src="./feeds-image/Mask Group (2).png"
+                    alt="profile picture"
+                    width="50px"
+                  />
+                </div>
+                <p class="ubuntu-feeds-font lh-1">
+                  Emi Tubo
+                  <span class="d-block lh-0 text-secondary">@superemi</span>
+                </p>
+                <div>
+                  <button
+                    type="submit"
+                    class="btn feeds-btn-bg text-white py-1 rounded-pill px-4"
+                  >
+                    Follow
+                  </button>
+                </div>
+              </div>
+              <div
+                class="
+                  d-flex
+                  justify-content-center
+                  align-items-baseline
+                  gap-2 gap-sm-3
+                  border-bottom border-2
+                  mt-3
+                "
+              >
+                <div>
+                  <img
+                    src="./feeds-image/monitor-1307227_1920 1.png"
+                    class="rounded-circle"
+                    alt="profile picture"
+                    width="50px"
+                  />
+                </div>
+                <p class="ubuntu-feeds-font lh-1">
+                  Emi Tubo
+                  <span class="d-block lh-0 text-secondary">@superemi</span>
+                </p>
+                <div>
+                  <button
+                    type="submit"
+                    class="btn feeds-btn-bg text-white py-1 rounded-pill px-4"
+                  >
+                    Follow
+                  </button>
+                </div>
+              </div>
+              <div
+                class="
+                  d-flex
+                  justify-content-center
+                  align-items-baseline
+                  gap-2 gap-sm-3
+                  border-bottom border-2
+                  mt-3
+                "
+              >
+                <div>
+                  <img
+                    src="./feeds-image/phone-1889401_1920 1.png"
+                    class="rounded-circle"
+                    alt="profile picture"
+                    width="50px"
+                  />
+                </div>
+                <p class="ubuntu-feeds-font lh-1">
+                  Emi Tubo
+                  <span class="d-block lh-0 text-secondary">@superemi</span>
+                </p>
+                <div>
+                  <button
+                    type="submit"
+                    class="btn feeds-btn-bg py-1 text-white rounded-pill px-4"
+                  >
+                    Follow
+                  </button>
+                </div>
+              </div>
+              <a
+                href="#"
+                class="
+                  d-block
+                  text-decoration-none text-end
+                  mt-3
+                  feeds-text
+                  ubuntu-feeds-font
+                "
+                >See More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--  codes for the modal -->
+    <section
+      id="new-poll-section"
+      class="poll-modal modal-display position-fixed top-0 start-0 w-100 h-100"
+    >
+      <!-- modal body container -->
+      <div
+        style="max-height: 25em"
+        class="
+          overflow-auto
+          position-relative
+          col-12 col-md-8 col-lg-6
+          top-50
+          start-50
+          translate-middle
+          bg-white
+          rounded
+          py-2
+        "
+      >
+        <!-- modal header -->
+        <div>
+          <button
+            data-btn="closemodal"
+            class="me-2 rounded-circle btn poll-bg float-end"
+          >
+            <img style="height: 0.7em" src="./image/clear_24px.png" alt="" />
+          </button>
+          <p class="text-center fs-2">Create a new Poll</p>
+        </div>
+        <!-- modal sub body -->
+        <div class="row">
+          <div class="col-10 offset-1">
+            <!-- modal sub-header -->
+            <div
+              class="
+                row
+                d-flex
+                align-items-center
+                justify-content-between
+                flex-column flex-sm-row
+              "
+            >
+              <div class="col-sm-6 d-flex align-items-center mb-2 mb-sm-0">
+                <img
+                  style="height: 3em"
+                  src="./image/Mask Group (1).png"
+                  class="img-fluid"
+                  alt="user-img"
+                />
+                <p class="m-0 ps-2">Person Picken</p>
+              </div>
+              <div class="col-sm-6 text-sm-end text-center p-0">
+                <button
+                  data-btn="category"
+                  class="btn modal-btn btn-outline-dark w-100 rounded"
+                >
+                  Select Catergory
+                </button>
+              </div>
+            </div>
+            <!-- modal- input -->
+            <div class="row mt-2">
+              <textarea
+                id="input"
+                class="rounded poll-bg"
+                placeholder="Type in your questions here..."
+                cols="30"
+                rows="3"
+              ></textarea>
+            </div>
+            <!-- modal dynamic parts -->
+            <div class="row dynamic">
+              <!-- User Selects An Option -->
+              <div
+                id="select-box"
+                class="
+                  bg-light
+                  d-flex
+                  align-items-center
+                  justify-content-around
+                  poll-bg
+                  mt-2
+                  rounded
+                "
+              >
+                <p>Select Option Type</p>
+                <div class="d-flex flex-column justify-content-center">
+                  <button data-btn="text" class="btn">
+                    <img
+                      style="height: 2em"
+                      src="./image/Frame.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </button>
+                  <p class="text-center">Text Option</p>
+                </div>
+                <div class="d-flex flex-column p-0">
+                  <button data-btn="image" class="btn">
+                    <img
+                      style="height: 2em"
+                      src="./image/insert_photo_24px.png"
+                      alt=""
+                    />
+                  </button>
+                  <p class="text-center">Image Option</p>
+                </div>
+              </div>
+              <!-- poll answer box -->
+              <div id="answer-box" class="poll-bg mt-2 modal-display rounded">
+                <button data-btn="revert" class="float-end btn">
+                  &#129188;
+                </button>
+                <p>Type in Poll Options Here</p>
+                <div class="col-10 offset-1">
+                  <input
+                    class="rounded-pill poll-bg p-1 mb-1 w-100"
+                    placeholder="Type in Poll Answer"
+                    type="text"
+                  />
+                  <input
+                    class="rounded-pill poll-bg p-1 mb-1 w-100"
+                    placeholder="Type in Poll Answer"
+                    type="text"
+                  />
+                  <input
+                    class="rounded-pill poll-bg p-1 mb-1 w-100"
+                    placeholder="Type in Poll Answer"
+                    type="text"
+                  />
+                  <input
+                    class="rounded-pill poll-bg p-1 mb-1 w-100"
+                    placeholder="Type in Poll Answer"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <!-- upload poll answer box  -->
+              <div
+                id="upload-box"
+                class="mt-2 modal-display rounded bg-light poll-bg"
+              >
+                <button data-btn="revert" class="float-end btn">
+                  &#129188;
+                </button>
+                <p>Upload Poll Options Here</p>
+                <div class="col-10 offset-1">
+                  <div
+                    class="
+                      bg-white
+                      d-flex
+                      justify-content-between
+                      align-items-center
+                      poll-bg
+                      rounded-pill
+                      py-1
+                      px-3
+                      mb-2
+                    "
+                  >
+                    <p class="m-0">Upload in poll Answer</p>
+                    <button class="btn rounded-pill p-0 px-3 poll-bg">
+                      Select Image
+                    </button>
+                  </div>
+                  <div
+                    class="
+                      bg-white
+                      d-flex
+                      justify-content-between
+                      align-items-center
+                      poll-bg
+                      rounded-pill
+                      py-1
+                      px-3
+                      mb-2
+                    "
+                  >
+                    <p class="m-0">Upload in poll Answer</p>
+                    <button class="btn rounded-pill p-0 px-3 poll-bg">
+                      Select Image
+                    </button>
+                  </div>
+                  <div
+                    class="
+                      bg-white
+                      d-flex
+                      justify-content-between
+                      align-items-center
+                      poll-bg
+                      rounded-pill
+                      py-1
+                      px-3
+                      mb-2
+                    "
+                  >
+                    <p class="m-0">Upload in poll Answer</p>
+                    <button class="btn rounded-pill p-0 px-3 poll-bg">
+                      Select Image
+                    </button>
+                  </div>
+                  <div
+                    class="
+                      bg-white
+                      d-flex
+                      justify-content-between
+                      align-items-center
+                      poll-bg
+                      rounded-pill
+                      py-1
+                      px-3
+                      mb-2
+                    "
+                  >
+                    <p class="m-0">Upload in poll Answer</p>
+                    <button class="btn rounded-pill p-0 px-3 poll-bg">
+                      Select Image
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- button -->
+            <div class="row mt-2">
+              <button style="background-color: #0e0e53" class="btn text-white">
+                post
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script src="script/bootstrap.min.js"></script>
     <script src="script/script.js"></script>
-</body>
+  </body>
 </html>

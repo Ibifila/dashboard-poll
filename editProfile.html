@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile | ChartPoll</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/notification.css">
+    <link rel="stylesheet" href="css/feed.css">
+</head>
+<body>
+  
+       <!-- SIDEBAR MOBILE -->
+       <nav class="navbar navbar-light bg-light d-lg-none feeds-bg border-bottom">
+        <div class="container-fluid">
+            <a href="./index.html" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-dark text-decoration-none">
+                <img src="./images/envelope.png" alt="Logo"  class="">
+                <span class="fw-bold text-secondary ps-2 fs-4">Chartpoll</span>
+                </a>
+            <!-- toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- nav links -->
+            <div class="collapse navbar-collapse justify-content-end align-center" id="navbarNav">
+                <ul class="navbar-nav text-white ms-2">
+                    <li class="nav-item">
+                        <a class="nav-link poll"><img src="./images/Vector (7).png" width="15px" alt="New Poll"><span class="text-secondary ps-4 pt-5">New Poll</span></a>
+                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="./images/Group 20.png" width="15px" alt="All Feeds"> <span class="text-secondary ps-4 pt-5">All Feeds</span> </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="./images/Vector (5).png" width="15px" alt="Technology"><span class="text-secondary ps-4 pt-5">Technology</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="./images/Vector (6).png" width="15px" alt="Politics"><span class="text-secondary ps-4 pt-5">Politics</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="./images/Vector (3).png" width="15px" alt="Movies"><span class="text-secondary ps-4 pt-5">Movies</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="./images/Group 18.png" width="15px" alt="Business"><span class="text-secondary ps-4 pt-5">Business</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="./profile.html"><img src="./images/Vector (4).png" width="15px" alt="Profile"><span class="text-secondary ps-4 pt-5">Profile</span></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR DESKTOP -->
+    <nav class="d-none d-lg-block feeds-bg fixed-top h-100 border-end reduce-width" style="width: 130px;">
+        <div class="d-flex flex-column flex-shrink-0 p-3 pt-4">
+            <span class="d-flex align-items-center mb-3 mb-lg-0 mt-2 me-lg-auto link-dark text-decoration-none">
+                <img src="./images/envelope.png" alt="Logo"  class="ms-4 ">
+                <span class="fw-bold text-secondary ps-2 fs-4 sidebar-text sidebar-hidden"><a class="text-decoration-none text-dark" href="./index.html">Chartpoll</a></span>
+                <span id="sidebar-button1" class="ms-4 sidebar-show"><img src="./images/Vector (9).png" alt="open"></span>
+                <span id="sidebar-button2" class="ms-4 sidebar-hidden"><img src="./images/Vector (8).png" alt="close"></span>
+            </span>
+            <ul class="nav flex-column mb-auto ps-3 pt-5 mt-3">
+                <li class="nav-item mb-3">
+                    <a class="nav-link active poll" aria-current="page"> <img src="./images/Vector (7).png" alt="New Poll"><span class="text-secondary ps-4 pt-5 sidebar-text sidebar-hidden">New Poll</span></a>
+                </li>
+                <li class="mb-3">
+                    <a href="./feeds.html" class="nav-link active" aria-current="page"><img src="./images/Group 20.png" alt="All Feeds"> <span class="text-secondary ps-4 pt-5 sidebar-text sidebar-hidden">All Feeds</span> </a>
+                </li>
+                <li class="mb-3">
+                    <a href="#" class="nav-link active" aria-current="page"><img src="./images/Vector (5).png" alt="Technology"><span class="text-secondary ps-4 pt-5 sidebar-text sidebar-hidden">Technology</span></a>
+                </li>
+                <li class="mb-3">
+                    <a href="#" class="nav-link active" aria-current="page"><img src="./images/Vector (6).png" alt="Politics"><span class="text-secondary ps-4 pt-5 sidebar-text sidebar-hidden">Politics</span></a>
+                </li>
+                <li class="mb-3">
+                    <a href="#" class="nav-link active" aria-current="page"><img src="./images/Vector (3).png" alt="Movies"><span class="text-secondary ps-4 pt-5 sidebar-text sidebar-hidden">Movies</span></a>
+                </li>
+                <li class="mb-3">
+                    <a href="#" class="nav-link active" aria-current="page"><img src="./images/Group 18.png" alt="Business"><span class="text-secondary ps-4 pt-5 sidebar-text sidebar-hidden">Business</span></a>
+                </li>
+                <li>
+                    <a href="./profile.html" class="nav-link active" aria-current="page"><img src="./images/Vector (4).png" alt="Profile"><span class="text-secondary ps-4 pt-5 sidebar-text sidebar-hidden">Profile</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- NAVBAR -->
+    <main class="feeds-wrapper">
+        <div class="pt-4 pb-1 row  px-5 sticky-top">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-9">
+                <div class="row justify-content-between">
+                    <div class="col-md-4"><input type="search" placeholder="Search a poll" class="form-control rounded-pill pe-5 ps-4"></div>
+                    <div class="col-md-4 mt-3 mt-md-0 col-lg-3">
+                        <a href="./notificationsPage.html"><span><img src="./images/Vector.png" alt="notification" width="25px"><img src="./images/Group 23.png" alt="" class="notify-num"></span></a>
+                        <span><a href="./profile.html"><img src="./images/Mask Group (1).png" alt="profile picture" width="30px" class="ms-3"></a></span>
+                        <div class="dropdown d-inline-block">
+                            <span class="dropdown-toggle fw-bold" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Senibo
+                            </span>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- NAVBAR ENDS HERE -->
+
+        <!-- PUT YOUR CONTENT BELOW -->
+        <!-- Cards Starts  -->
+        <div class="row mx-3 mt-1 mb-3 g-4">
+            <div class="col-xl-3">
+                <div class="row  align-items-baseline justify-content-evenly ms-xl-2">
+                    <div class="col-md-5 px-0 col-xl-12 feeds-bg border pb-3">
+                        <div class="feeds-btn-bg py-4"></div>
+                        <div class="px-2">
+                            <div  class= "mx-2"style= "width:50px; height:50px; position: relative; bottom: 30px;">
+                              <img src="./images/Mask Group (1).png" class="card-img-top " alt="...">
+                            </div>
+                            <p class="ubuntu-feeds-font lead pt-3 mb-2 space">Person Picken</p>
+                            <p class="ubuntu-feeds-font text-secondary mb-1">@begifted</p>
+                            <p class="mb-1 text-dark ubuntu-feeds-font">Followers:  350</p>
+                            <p class="mb-1 text-dark ubuntu-feeds-font">Following: 9.5k</p>
+                            <p class="mb-1 text-dark ubuntu-feeds-font">Region: Port harcourt</p>
+                            <p class="mb-1 text-dark ubuntu-feeds-font">Number of Answered polls <span class="fst-italic fw-bold">: 650</span></p>
+                            <p class="mb- text-dark ubuntu-feeds-font">Number of Polls Asked <span class="fst-italic fw-bold">: 487</span></p>
+                            <a href="#" class="d-block text-center text-decoration-none py-3 px-4 feeds-text change-border shape-radius">Edit Profile</a>
+                        </div>
+                   </div>
+                   <div class="col-md-5 col-xl-12 feeds-bg border p-3 mt-5 pb-5">
+                        <p class="ubuntu-feeds-font lead pt-1">Edit Password</p>
+                        <a href="#" class="d-block text-center text-decoration-none py-1 px-4 border border-primary rounded-pill mb-2 ubuntu-feeds-font text-primary">Travel</a>
+                        <a href="#" class="d-block text-center text-decoration-none py-1 px-4 border border-primary rounded-pill mb-2 ubuntu-feeds-font text-primary">Tech</a>
+                        <a href="#" class="d-block text-center text-decoration-none py-1 px-4 border border-primary rounded-pill mb-2 ubuntu-feeds-font text-primary">Culture</a>
+                        <a href="#" class="d-block text-center text-decoration-none py-1 px-4 border border-primary rounded-pill mb-2 ubuntu-feeds-font text-primary">Place</a>
+                        <a href="#" class="d-block text-center text-decoration-none py-1 px-4 border border-primary rounded-pill mb-2 ubuntu-feeds-font text-primary">Hollywood</a>
+                        <a href="#" class="d-block text-center text-decoration-none py-1 px-4 border border-primary rounded-pill ubuntu-feeds-font text-primary">Covid-19</a>
+                    </div>
+                </div>
+            </div> 
+          <!-- Cards End -->
+
+          <!-- Profile Editing Page starts here -->
+          <div class="col-xl-8 col-md-12 col-sm-2  bg-light ms-lg-1">
+            <!-- profile image -->
+              <div class="border border-dark backg px-5 edit-padding d-flex row  justify-content-center ">
+                  <p class="text-dark fw-bold edit-margin">Edit Profile</p>
+                  <div  class= " me-5 mt-5 mb-0 align-self-baseline"style= "width:50px; height:50px;">
+                    <img src="./images/Mask Group (1).png" class="" alt="...">
+                  </div>
+                  
+              </div>
+              <!-- form -->
+                <form class="form-margin row justify-content-center mt-5 pt-5">
+                    <div class="col-md-8">
+                      <div class="row mb-3">
+                        <label for="fname" class="col-sm-3 col-form-label">First Name</label>
+                        <div class="col-sm-6 border-">
+                          <input type="text" class="form-control" id="fname" placeholder="Person">
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="lname" class="col-sm-3 col-form-label">Last Name</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="lname" placeholder="Picken">
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="email" class="col-sm-3 col-form-label">Email</label>
+                        <div class="col-sm-6">
+                          <input type="email" class="form-control" id="email" placeholder="personpicken@Email.com">
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="region" class="col-sm-3 col-form-label">Your Region</label>
+                        <div class="col-sm-6">
+                          <input type="" class="form-control" id="region" placeholder="Select Region">
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="num" class="col-sm-3 col-form-label">Mobile Number</label>
+                        <div class="col-sm-3">
+                          <input type="tel" class="form-control mb-3" id="num" placeholder="Nigeria (+234)">
+                        </div>
+                        <div class="col-sm-3">
+                          <input type="tel" class="form-control" id="num2" placeholder="8105393816">
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="gender" class="col-sm-3 col-form-label">Gender</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="gender" placeholder="male">
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="dob" class="col-sm-3 col-form-label">DOB</label>
+                        <div class="col-sm-2">
+                          <input type="text" class="form-control mb-3" id="dob" placeholder="7th">
+                        </div>
+                        <div class="col-sm-2">
+                          <input type="text" class="form-control mb-3" id="month" placeholder="Nov">
+                        </div>
+                        <div class="col-sm-2">
+                          <input type="text" class="form-control" id="year" placeholder="2020">
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        <a href="./profile.html" class="btn btn-lg mx-3 text-white proceed-btn shape-radius2 col-sm-4 px-5 py-2">
+                          proceed 
+                        </a>
+                      </div>
+                    </div>
+                  </form>
+                                <!-- profile footer -->
+
+                <div class="bg-light border border-dark py-3 px-0 rounded-3 my-5  d-flex flex-wrap justify-content-center"> 
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills text-pill pills-font">ICT</button>
+                  <button class=" shape-radius2 border border-primary text-center px-3 py-1 m-1 pills pillsbg text-white pills-font">Relationship</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills text-pill pills-font">Travel</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills text-pill pills-font">ICT</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills pillsbg text-white pills-font">Relationship</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills text-pill pills-font">Travel</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills pillsbg text-white pills-font">Places</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills text-pill pills-font">People</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills text-pill pills-font">Nigeria</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills pillsbg text-white pills-font">Places</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills text-pill pills-font">People</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills text-pill pills-font">Nigeria</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills text-pill pills-font">Medicine</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills pillsbg text-white pills-font">Web Development</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills pillsbg text-white pills-font">Tradition</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills text-pill pills-font">Medicine</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills pillsbg text-white pills-font"> Web Development</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills pillsbg text-white pills-font">Tradition</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills pillsbg text-white pills-font">Tech</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills pillsbg text-white pills-font">Trends</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills text-pill pills-font">Stories</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills pillsbg text-white pills-font">Tech</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills pillsbg text-white pills-font">Trends</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills text-pill pills-font">Stories</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills pillsbg text-white pills-font">Fashion</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills pillsbg text-white pills-font">Food</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills text-pill pills-font">Business</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills pillsbg text-white pills-font">Fashion</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills pillsbg text-white pills-font">Food</button>
+                  <button class="shape-radius2 border border-primary text-center px-3 py-1 m-1 pills text-pill pills-font">Business</button>
+                </div>
+
+              <!-- profile footer end -->
+
+              </div>
+
+          </div>
+
+
+          <section
+          id="new-poll-section"
+          class="poll-modal modal-display position-fixed top-0 start-0 w-100 h-100"
+        >
+          <!-- modal body container -->
+          <div
+            style="max-height: 25em"
+            class="
+              overflow-auto
+              position-relative
+              col-12 col-md-8 col-lg-6
+              top-50
+              start-50
+              translate-middle
+              bg-white
+              rounded
+              py-2
+            "
+          >
+            <!-- modal header -->
+            <div>
+              <button
+                data-btn="closemodal"
+                class="me-2 rounded-circle btn poll-bg float-end"
+              >
+                <img style="height: 0.7em" src="./image/clear_24px.png" alt="" />
+              </button>
+              <p class="text-center fs-2">Create a new Poll</p>
+            </div>
+            <!-- modal sub body -->
+            <div class="row">
+              <div class="col-10 offset-1">
+                <!-- modal sub-header -->
+                <div
+                  class="
+                    row
+                    d-flex
+                    align-items-center
+                    justify-content-between
+                    flex-column flex-sm-row
+                  "
+                >
+                  <div class="col-sm-6 d-flex align-items-center mb-2 mb-sm-0">
+                    <img
+                      style="height: 3em"
+                      src="./image/Mask Group (1).png"
+                      class="img-fluid"
+                      alt="user-img"
+                    />
+                    <p class="m-0 ps-2">Person Picken</p>
+                  </div>
+                  <div class="col-sm-6 text-sm-end text-center p-0">
+                    <button
+                      data-btn="category"
+                      class="btn modal-btn btn-outline-dark w-100 rounded"
+                    >
+                      Select Catergory
+                    </button>
+                  </div>
+                </div>
+                <!-- modal- input -->
+                <div class="row mt-2">
+                  <textarea
+                    id="input"
+                    class="rounded poll-bg"
+                    placeholder="Type in your questions here..."
+                    cols="30"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <!-- modal dynamic parts -->
+                <div class="row dynamic">
+                  <!-- User Selects An Option -->
+                  <div
+                    id="select-box"
+                    class="
+                      bg-light
+                      d-flex
+                      align-items-center
+                      justify-content-around
+                      poll-bg
+                      mt-2
+                      rounded
+                    "
+                  >
+                    <p>Select Option Type</p>
+                    <div class="d-flex flex-column justify-content-center">
+                      <button data-btn="text" class="btn">
+                        <img
+                          style="height: 2em"
+                          src="./image/Frame.png"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </button>
+                      <p class="text-center">Text Option</p>
+                    </div>
+                    <div class="d-flex flex-column p-0">
+                      <button data-btn="image" class="btn">
+                        <img
+                          style="height: 2em"
+                          src="./image/insert_photo_24px.png"
+                          alt=""
+                        />
+                      </button>
+                      <p class="text-center">Image Option</p>
+                    </div>
+                  </div>
+                  <!-- poll answer box -->
+                  <div id="answer-box" class="poll-bg mt-2 modal-display rounded">
+                    <button data-btn="revert" class="float-end btn">
+                      &#129188;
+                    </button>
+                    <p>Type in Poll Options Here</p>
+                    <div class="col-10 offset-1">
+                      <input
+                        class="rounded-pill poll-bg p-1 mb-1 w-100"
+                        placeholder="Type in Poll Answer"
+                        type="text"
+                      />
+                      <input
+                        class="rounded-pill poll-bg p-1 mb-1 w-100"
+                        placeholder="Type in Poll Answer"
+                        type="text"
+                      />
+                      <input
+                        class="rounded-pill poll-bg p-1 mb-1 w-100"
+                        placeholder="Type in Poll Answer"
+                        type="text"
+                      />
+                      <input
+                        class="rounded-pill poll-bg p-1 mb-1 w-100"
+                        placeholder="Type in Poll Answer"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                  <!-- upload poll answer box  -->
+                  <div
+                    id="upload-box"
+                    class="mt-2 modal-display rounded bg-light poll-bg"
+                  >
+                    <button data-btn="revert" class="float-end btn">
+                      &#129188;
+                    </button>
+                    <p>Upload Poll Options Here</p>
+                    <div class="col-10 offset-1">
+                      <div
+                        class="
+                          bg-white
+                          d-flex
+                          justify-content-between
+                          align-items-center
+                          poll-bg
+                          rounded-pill
+                          py-1
+                          px-3
+                          mb-2
+                        "
+                      >
+                        <p class="m-0">Upload in poll Answer</p>
+                        <button class="btn rounded-pill p-0 px-3 poll-bg">
+                          Select Image
+                        </button>
+                      </div>
+                      <div
+                        class="
+                          bg-white
+                          d-flex
+                          justify-content-between
+                          align-items-center
+                          poll-bg
+                          rounded-pill
+                          py-1
+                          px-3
+                          mb-2
+                        "
+                      >
+                        <p class="m-0">Upload in poll Answer</p>
+                        <button class="btn rounded-pill p-0 px-3 poll-bg">
+                          Select Image
+                        </button>
+                      </div>
+                      <div
+                        class="
+                          bg-white
+                          d-flex
+                          justify-content-between
+                          align-items-center
+                          poll-bg
+                          rounded-pill
+                          py-1
+                          px-3
+                          mb-2
+                        "
+                      >
+                        <p class="m-0">Upload in poll Answer</p>
+                        <button class="btn rounded-pill p-0 px-3 poll-bg">
+                          Select Image
+                        </button>
+                      </div>
+                      <div
+                        class="
+                          bg-white
+                          d-flex
+                          justify-content-between
+                          align-items-center
+                          poll-bg
+                          rounded-pill
+                          py-1
+                          px-3
+                          mb-2
+                        "
+                      >
+                        <p class="m-0">Upload in poll Answer</p>
+                        <button class="btn rounded-pill p-0 px-3 poll-bg">
+                          Select Image
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- button -->
+                <div class="row mt-2">
+                  <button style="background-color: #0e0e53" class="btn text-white">
+                    post
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/script.js"></script>
+    <!-- <script src="./script/app.js"></script>  -->
+</body>
+</html>

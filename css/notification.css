@@ -1,0 +1,60 @@
+.space{
+    margin-top: -35px !important;
+}
+.space2{
+    margin-top: -5px !important;
+}
+
+.backg{
+    background: #1088bba6;
+}
+
+.marg{
+    margin: 0 -12px;
+}
+
+.marg2{
+    margin: 0 auto -45px;
+}
+
+.userFontColor{
+    color: #09174B;
+}
+.edit-margin{
+    margin-top: -45px;
+    
+}
+
+
+.proceed-btn{
+    background-color: #09174B;
+    margin-top: 250px;
+    width: 220px;
+}
+.pills{
+    width:120px;
+}
+.pillsbg{
+    background-color:#1E79A1;
+    ;  
+}
+
+.text-pill{
+    color:#1E79A1;
+
+}
+.pills-font{
+    font-size: 0.6rem;
+}
+
+.edit-padding{
+    padding: 60px 0 !important;
+}
+
+.shape-radius2{
+    border-radius: 8px;
+}
+
+/* .form-margin{
+    margin: 0 130px;
+} */
